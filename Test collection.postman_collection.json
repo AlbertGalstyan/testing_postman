@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "3623572f-43fd-4530-8b7d-cab98593b0e0",
+		"_postman_id": "524666cc-b01c-4a4e-ba18-a68ac9bc76c6",
 		"name": "Test collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11120281",
-		"_collection_link": "https://red-astronaut-331072.postman.co/workspace/Test~dc7880c4-76b1-4c32-b4e4-f1b3577c6773/collection/11120281-3623572f-43fd-4530-8b7d-cab98593b0e0?action=share&source=collection_link&creator=11120281"
+		"_collection_link": "https://red-astronaut-331072.postman.co/workspace/Test~dc7880c4-76b1-4c32-b4e4-f1b3577c6773/collection/11120281-524666cc-b01c-4a4e-ba18-a68ac9bc76c6?action=share&source=collection_link&creator=11120281"
 	},
 	"item": [
 		{
@@ -15,7 +15,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(202);\r",
 							"});\r",
 							"let response = pm.response.json()\r",
 							"pm.collectionVariables.set(\"token\", response.token)"
@@ -54,13 +54,6 @@
 					],
 					"path": [
 						"auth"
-					],
-					"query": [
-						{
-							"key": "kk",
-							"value": "kk",
-							"disabled": true
-						}
 					]
 				}
 			},
