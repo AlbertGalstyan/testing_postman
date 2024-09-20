@@ -15,7 +15,7 @@
 					"script": {
 						"exec": [
 							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(202);\r",
+							"    pm.response.to.have.status(200);\r",
 							"});\r",
 							"let response = pm.response.json()\r",
 							"pm.collectionVariables.set(\"token\", response.token)"
