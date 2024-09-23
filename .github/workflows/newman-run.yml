@@ -23,11 +23,11 @@ jobs:
 
       - name: Run Newman Collection
         env:
-          url: ${{secrets.url}}
-          username: ${{secrets.username}}
-          password: ${{secrets.password}}
+          url: ${{secrets.URL}}
+          username: ${{secrets.USERNAME}}
+          password: ${{secrets.PASSWORD}}
         run: |
           newman run "Test collection.postman_collection.json"
-          --env-var "url=$url"
-          --env-var "username=$username"
-          --env-var "password=$password"
+          --env-var "url=${{env.url}}"
+          --env-var "username=${{env.username}}"
+          --env-var "password=${{env.password}}"

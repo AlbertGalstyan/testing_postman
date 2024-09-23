@@ -112,9 +112,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/booking",
+					"raw": "{{URL}}/booking",
 					"host": [
-						"{{url}}"
+						"{{URL}}"
 					],
 					"path": [
 						"booking"
@@ -145,9 +145,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/booking/{{id}}",
+					"raw": "{{URL}}/booking/{{id}}",
 					"host": [
-						"{{url}}"
+						"{{URL}}"
 					],
 					"path": [
 						"booking",
