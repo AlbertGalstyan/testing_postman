@@ -21,6 +21,24 @@ jobs:
       - name: Install Newman
         run: npm install -g newman
 
+      - name: Install Html extra Reporter
+        run: npm install -g newman-reporter-htmlextra
+
       - name: Run Newman Collection
+        env:
+          URL: ${{ secrets.URL }}
+          USERNAME: ${{ secrets.USERNAME }}
+          PASSWORD: ${{ secrets.PASSWORD }}
         run: |
-          newman run "Test collection.postman_collection.json" -e "Develop.postman_environment.json"
+          newman run "Test collection.postman_collection.json" \
+            --env-var "URL=${{ env.URL }}" \
+            --env-var "USERNAME=${{ env.USERNAME }}" \
+            --env-var "PASSWORD=${{ env.PASSWORD }}" \
+            -r htmlextra \
+            --reporter-htmlextra-export reports/report.html
+
+      - name: Upload HTML report
+        uses: actions/upload-artifact@v3
+        with:
+          name: newman-html-reporter
+          path: reports/report.html
