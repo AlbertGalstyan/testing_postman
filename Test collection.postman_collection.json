@@ -20,7 +20,8 @@
 							"let response = pm.response.json()\r",
 							"pm.collectionVariables.set(\"token\", response.token)"
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
@@ -39,7 +40,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"{{USERNAME}}\",\r\n    \"password\" : \"{{PASSWORD}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -47,9 +48,9 @@
 					}
 				},
 				"url": {
-					"raw": "{{url}}/auth",
+					"raw": "{{URL}}/auth",
 					"host": [
-						"{{url}}"
+						"{{URL}}"
 					],
 					"path": [
 						"auth"
