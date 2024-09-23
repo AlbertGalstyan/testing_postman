@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "3623572f-43fd-4530-8b7d-cab98593b0e0",
+		"_postman_id": "524666cc-b01c-4a4e-ba18-a68ac9bc76c6",
 		"name": "Test collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "11120281",
-		"_collection_link": "https://red-astronaut-331072.postman.co/workspace/Test~dc7880c4-76b1-4c32-b4e4-f1b3577c6773/collection/11120281-3623572f-43fd-4530-8b7d-cab98593b0e0?action=share&source=collection_link&creator=11120281"
+		"_collection_link": "https://red-astronaut-331072.postman.co/workspace/Test~dc7880c4-76b1-4c32-b4e4-f1b3577c6773/collection/11120281-524666cc-b01c-4a4e-ba18-a68ac9bc76c6?action=share&source=collection_link&creator=11120281"
 	},
 	"item": [
 		{
@@ -20,8 +20,7 @@
 							"let response = pm.response.json()\r",
 							"pm.collectionVariables.set(\"token\", response.token)"
 						],
-						"type": "text/javascript",
-						"packages": {}
+						"type": "text/javascript"
 					}
 				}
 			],
@@ -40,7 +39,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"username\" : \"{{user}}\",\r\n    \"password\" : \"{{pass}}\"\r\n}",
+					"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -54,13 +53,6 @@
 					],
 					"path": [
 						"auth"
-					],
-					"query": [
-						{
-							"key": "kk",
-							"value": "kk",
-							"disabled": true
-						}
 					]
 				}
 			},

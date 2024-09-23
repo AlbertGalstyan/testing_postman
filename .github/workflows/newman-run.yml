@@ -22,5 +22,12 @@ jobs:
         run: npm install -g newman
 
       - name: Run Newman Collection
+        env:
+          url: ${{secrets.url}}
+          username: ${{secrets.username}}
+          password: ${{secrets.password}}
         run: |
-          newman run "Test collection.postman_collection.json" -e "Develop.postman_environment.json"
+          newman run "Test collection.postman_collection.json"
+          --env-var "url=$url"
+          --env-var "username=$username"
+          --env-var "password=$password"
