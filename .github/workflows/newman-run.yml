@@ -34,10 +34,11 @@ jobs:
             --env-var "URL=${{ env.URL }}" \
             --env-var "USERNAME=${{ env.USERNAME }}" \
             --env-var "PASSWORD=${{ env.PASSWORD }}" \
-            -r htmlextra
+            -r htmlextra \
+            --reporter-htmlextra-export reports/report.html
 
       - name: Upload HTML report
         uses: actions/upload-artifact@v3
         with:
           name: newman-html-reporter
-          path: reports
+          path: reports/report.html
