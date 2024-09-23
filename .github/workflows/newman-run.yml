@@ -28,6 +28,6 @@ jobs:
           password: ${{secrets.PASSWORD}}
         run: |
           newman run "Test collection.postman_collection.json"
-          --env-var "url=${{env.url}}"
-          --env-var "username=${{env.username}}"
-          --env-var "password=${{env.password}}"
+          --env-var "URL=${{env.url}}"
+          --env-var "USERNAME=${{env.username}}"
+          --env-var "PASSWORD=${{env.password}}"
