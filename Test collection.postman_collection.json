@@ -60,7 +60,7 @@
 			"response": []
 		},
 		{
-			"name": "Create Booking",
+			"name": "Create Booking1",
 			"event": [
 				{
 					"listen": "prerequest",
