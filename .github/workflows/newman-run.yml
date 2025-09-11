@@ -28,7 +28,6 @@ jobs:
         run: mkdir -p reports
 
       - name: Run Newman Collection
-        shell: bash {0}
         run: |
           newman run "Test collection.postman_collection.json" \
             --environment "dev.postman_environment.json" \
